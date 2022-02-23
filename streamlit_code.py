@@ -55,7 +55,7 @@ poly = PolynomialFeatures(degree=2)
 X_poly_features = poly.fit_transform(features)
 
 
-order_on_album = st.slider('Track Number on Album', df['Track_Number'].min(), df['Track_Number'].max(),1)
+order_on_album = st.slider('Track Number on Album', int(df['Track_Number'].min()), int(df['Track_Number'].max()),1)
 number_of_songs_on_album = st.slider('Number of Songs on Album', df['Total_Tracks'].min(),df['Total_Tracks'].max(),1)
 length_of_song = st.number_input('Length of Song in milliseconds', value = 200)
 
